@@ -23,6 +23,7 @@ Navigate to http://localhost:3000.
 Note: Use Google Chrome or Microsoft Edge for full Speech API support.
 
 📸 Screenshots
+<img width="1909" height="1061" alt="Screenshot 2026-02-23 232001" src="https://github.com/user-attachments/assets/ac130326-b7d1-419e-ac46-c772386dacc0" />
 
 
 📤 How to Move to GitHub
