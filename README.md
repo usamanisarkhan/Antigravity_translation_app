@@ -23,7 +23,7 @@ Navigate to http://localhost:3000.
 Note: Use Google Chrome or Microsoft Edge for full Speech API support.
 
 📸 Screenshots
-<img width="1909" height="1061" alt="Screenshot 2026-02-23 232001" src="https://github.com/user-attachments/assets/ac130326-b7d1-419e-ac46-c772386dacc0" />
+
 <img width="1909" height="1061" alt="Screenshot 2026-02-23 232001" src="https://github.com/user-attachments/assets/264cfa7d-2ad8-4f25-b366-b14ccdc2bd7b" />
 <img width="1729" height="1021" alt="Screenshot 2026-02-23 230611" src="https://github.com/user-attachments/assets/77e0a019-a434-4376-a439-5cbff937cc3c" />
 <img width="1557" height="1032" alt="Screenshot 2026-02-23 230629" src="https://github.com/user-attachments/assets/ac9dee73-c5ce-4bdb-a17c-9c190cc759a5" />
