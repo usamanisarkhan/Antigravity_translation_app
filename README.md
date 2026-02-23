@@ -24,6 +24,11 @@ Note: Use Google Chrome or Microsoft Edge for full Speech API support.
 
 📸 Screenshots
 <img width="1909" height="1061" alt="Screenshot 2026-02-23 232001" src="https://github.com/user-attachments/assets/ac130326-b7d1-419e-ac46-c772386dacc0" />
+<img width="1909" height="1061" alt="Screenshot 2026-02-23 232001" src="https://github.com/user-attachments/assets/264cfa7d-2ad8-4f25-b366-b14ccdc2bd7b" />
+<img width="1729" height="1021" alt="Screenshot 2026-02-23 230611" src="https://github.com/user-attachments/assets/77e0a019-a434-4376-a439-5cbff937cc3c" />
+<img width="1557" height="1032" alt="Screenshot 2026-02-23 230629" src="https://github.com/user-attachments/assets/ac9dee73-c5ce-4bdb-a17c-9c190cc759a5" />
+<img width="1532" height="914" alt="Screenshot 2026-02-23 231445" src="https://github.com/user-attachments/assets/647b5a8e-3a26-4e86-b272-1332ac113bb6" />
+<img width="1456" height="923" alt="Screenshot 2026-02-23 231519" src="https://github.com/user-attachments/assets/7b716706-9b15-4a59-aa3e-029e42371318" />
 
 
 📤 How to Move to GitHub
