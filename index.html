@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sointu - Real-time Voice Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Sointu</h1>
+            <p class="subtitle">Real-time English ↔ Finnish Translator</p>
+        </header>
+
+        <main>
+            <div class="glass-card">
+                <div class="status-bar">
+                    <div class="status-info">
+                        <div id="status-indicator" class="indicator"></div>
+                        <span id="status-text">Ready to Translate</span>
+                    </div>
+                    <button id="toggle-btn" class="btn-toggle">
+                        <span id="mode-display">EN ➔ FI</span>
+                    </button>
+                </div>
+
+                <div class="translation-grid">
+                    <div class="speech-box">
+                        <label>Detected Speech</label>
+                        <div id="original-text" class="text-area" placeholder="Start speaking...">Speak now...</div>
+                        <div class="lang-tag" id="detected-lang">Detecting...</div>
+                    </div>
+
+                    <div class="speech-box">
+                        <label>Finnish / English Translation</label>
+                        <div id="translated-text" class="text-area translated"
+                            placeholder="Translation will appear here...">Odota kääntämistä...</div>
+                        <div class="lang-tag" id="target-lang">Translation</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="start-btn" class="btn primary">Start Listening</button>
+                    <button id="stop-btn" class="btn secondary" disabled>Stop</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Web Speech API & Sointu AI</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
