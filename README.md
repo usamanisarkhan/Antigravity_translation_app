@@ -87,7 +87,7 @@ Step 4: Verify the Results
 Refresh your GitHub repository page. You should now see your index.html, app.js, style.css, and this README.md file displayed perfectly on the front page.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
-Home Work Task:
+# Home Work Task:
 
 Tweak your application Using GEMINI CLI.
 
