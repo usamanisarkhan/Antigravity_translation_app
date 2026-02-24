@@ -1,26 +1,40 @@
-Anti-Gravity Controller 🛸
-An intuitive web application that translates live voice messages between English and Finnish with near-zero latency.
+# Anti-Gravity Controller 🛸  
 
-🛠 How This Was Created
-1. Code Generation
-The core logic was built using Anti-Gravity. Instead of having the AI deploy the app, the source code was generated locally using the following prompt:
+An intuitive web application that translates live voice input between **English** and **Finnish** with near-zero latency.
 
-Prompt: Give me a code for making a language translator which listens and translates the language to Finnish language. If the language is Finnish, it converts into English. I want output in text, but input should be live voice. There should be no latency. I should have a toggle button to have choice from En to Fi or Fi to EN.
+---
 
-2. Local Environment Setup
-Because this application utilizes the Web Speech API, it requires a secure context (local server) to access the microphone.
+## 🛠 Project Overview
 
-Navigate to the directory:
+### 1️⃣ Code Generation
 
-Bash
+The core logic was built using **Anti-Gravity**.
+
+Instead of auto-deploying the app, the source code was generated locally using the following prompt:
+
+> **Prompt:**  
+> Give me a code for making a language translator which listens and translates the language to Finnish language. If the language is Finnish, it converts into English. I want output in text, but input should be live voice. There should be no latency. I should have a toggle button to have choice from En to Fi or Fi to EN.
+
+---
+
+### 2️⃣ Local Environment Setup
+
+Since this application uses the **Web Speech API**, it must run in a secure context (local server) to access the microphone.
+
+#### Step 1: Navigate to the project directory
+
+
 cd "Language translator - Antigravity"
-Launch the server:
-
-Bash
+Step 2: Launch the local server
 npx serve
-Open in Browser:
-Navigate to http://localhost:3000.
-Note: Use Google Chrome or Microsoft Edge for full Speech API support.
+Step 3: Open in Browser
+
+Open:
+
+http://localhost:3000
+
+Important:
+Use Google Chrome or Microsoft Edge for full Web Speech API support.
 
 📸 Screenshots
 
