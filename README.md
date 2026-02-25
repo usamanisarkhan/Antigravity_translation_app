@@ -113,8 +113,6 @@ Below are detailed instructions on how to Use GEMINI CLI.
 
 
 
-![Gemini CLI Screenshot](./docs/assets/gemini-screenshot.png)
-
 Gemini CLI is an open-source AI agent that brings the power of Gemini directly
 into your terminal. It provides lightweight access to Gemini, giving you the
 most direct path from your prompt to our model.
