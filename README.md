@@ -110,6 +110,7 @@ Below are detailed instructions on how to Use GEMINI CLI.
 
 
 # Gemini CLI
+<img width="890" height="268" alt="image" src="https://github.com/user-attachments/assets/a7d2a16c-0983-4d11-9bc7-52ec3f3cf7ca" />
 
 
 
