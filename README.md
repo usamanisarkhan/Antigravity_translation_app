@@ -1,4 +1,4 @@
-# Anti-Gravity Controller 🛸  
+# Anti-Gravity Translation App  
 
 An intuitive web application that translates live voice input between **English** and **Finnish** with near-zero latency.
 
@@ -14,6 +14,8 @@ Instead of auto-deploying the app, the source code was generated locally using t
 
 > **Prompt:**  
 > Give me a code for making a language translator which listens and translates the language to Finnish language. If the language is Finnish, it converts into English. I want output in text, but input should be live voice. There should be no latency. I should have a toggle button to have choice from English to Finnish or Finnish to English.
+>
+> This will return us the code for the application
 
 ---
 
@@ -22,11 +24,14 @@ Instead of auto-deploying the app, the source code was generated locally using t
 Since this application uses the **Web Speech API**, it must run in a secure context (local server) to access the microphone.
 
 #### Step 1: Navigate to the project directory
+Using Terminal
 
+cd "translation app"
 
-cd "Language translator - Antigravity"
 Step 2: Launch the local server
+
 npx serve
+
 Step 3: Open in Browser
 
 Open:
