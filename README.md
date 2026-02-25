@@ -13,7 +13,7 @@ The core logic was built using **Anti-Gravity**.
 Instead of auto-deploying the app, the source code was generated locally using the following prompt:
 
 > **Prompt:**  
-> Give me a code for making a language translator which listens and translates the language to Finnish language. If the language is Finnish, it converts into English. I want output in text, but input should be live voice. There should be no latency. I should have a toggle button to have choice from En to Fi or Fi to EN.
+> Give me a code for making a language translator which listens and translates the language to Finnish language. If the language is Finnish, it converts into English. I want output in text, but input should be live voice. There should be no latency. I should have a toggle button to have choice from English to Finnish or Finnish to English.
 
 ---
 
