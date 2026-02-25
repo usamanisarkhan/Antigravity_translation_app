@@ -68,27 +68,35 @@ Step 2: Initialize Git Locally
 Open your terminal in the project folder and execute these commands:
 
 Bash
-# 1. Initialize the folder as a Git repository
+1. Initialize the folder as a Git repository
+
 git init
 
-# 2. Add all your files to the staging area
+2. Add all your files to the staging area
+
 git add .
 
-# 3. Save your changes with a message
+3. Save your changes with a message
 git commit -m "Initial commit: Anti-gravity translator ready for deployment"
+
 Step 3: Link and Push to GitHub
+
 Connect your local folder to your GitHub repository. (Replace the URL with your actual URL from Step 1):
 
-Bash
-# 4. Point your local code to your GitHub URL
+4. Point your local code to your GitHub URL
+
 git remote add origin https://github.com/YOUR_USERNAME/anti-gravity-translator.git
 
-# 5. Rename your default branch to 'main'
+5. Rename your default branch to 'main'
+
 git branch -M main
 
-# 6. Upload your code
+6. Upload your code
+
 git push -u origin main
+
 Step 4: Verify the Results
+
 Refresh your GitHub repository page. You should now see your index.html, app.js, style.css, and this README.md file displayed perfectly on the front page.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
