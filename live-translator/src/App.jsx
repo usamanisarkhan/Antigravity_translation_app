@@ -5,8 +5,11 @@ export default function App() {
   const [direction, setDirection] = useState("EN_TO_FI");
   const [text, setText] = useState("");
   const [translated, setTranslated] = useState("");
+  const [cameraActive, setCameraActive] = useState(false);
 
   const recognitionRef = useRef(null);
+  const videoRef = useRef(null);
+  const streamRef = useRef(null);
 
   useEffect(() => {
     const SpeechRecognition =
@@ -30,19 +33,25 @@ export default function App() {
 
       const target = direction === "EN_TO_FI" ? "fi" : "en";
 
-      const res = await fetch("https://libretranslate.de/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          q: transcript,
-          source: "auto",
-          target: target,
-          format: "text"
-        })
-      });
+      try {
+        const res = await fetch("https://libretranslate.de/translate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            q: transcript,
+            source: "auto",
+            target: target,
+            format: "text"
+          })
+        });
 
-      const data = await res.json();
-      setTranslated(data.translatedText);
+        const data = await res.json();
+        if (data.translatedText) {
+          setTranslated(data.translatedText);
+        }
+      } catch (error) {
+        console.error("Translation error:", error);
+      }
     };
 
     recognitionRef.current = recognition;
@@ -58,33 +67,77 @@ export default function App() {
     }
   };
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Live Voice Translator</h2>
-
-      <button onClick={toggleListening}>
-        {listening ? "Stop" : "Start"} Listening
-      </button>
-
-      <button
-        onClick={() =>
-          setDirection(
-            direction === "EN_TO_FI" ? "FI_TO_EN" : "EN_TO_FI"
-          )
+  const toggleCamera = async () => {
+    if (cameraActive) {
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach(track => track.stop());
+      }
+      setCameraActive(false);
+    } else {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
         }
-        style={{ marginLeft: "10px" }}
-      >
-        {direction === "EN_TO_FI"
-          ? "English → Finnish"
-          : "Finnish → English"}
-      </button>
+        streamRef.current = stream;
+        setCameraActive(true);
+      } catch (err) {
+        console.error("Error accessing camera:", err);
+        alert("Could not access camera");
+      }
+    }
+  };
 
-      <div style={{ marginTop: "30px" }}>
-        <h4>Recognized:</h4>
-        <p>{text}</p>
+  return (
+    <div className="translator-container">
+      <h2>Live Video Translator</h2>
 
-        <h4>Translated:</h4>
-        <p>{translated}</p>
+      <div className="button-group">
+        <button 
+          onClick={toggleListening}
+          className={`btn-primary ${listening ? "btn-listening" : ""}`}
+        >
+          {listening ? "Stop" : "Start"} Listening
+        </button>
+
+        <button
+          onClick={toggleCamera}
+          className={`btn-primary ${cameraActive ? "btn-active" : ""}`}
+          style={{ backgroundColor: cameraActive ? "#059669" : "#10b981" }}
+        >
+          {cameraActive ? "Turn Off" : "Turn On"} Camera
+        </button>
+
+        <button
+          onClick={() =>
+            setDirection(
+              direction === "EN_TO_FI" ? "FI_TO_EN" : "EN_TO_FI"
+            )
+          }
+          className="btn-secondary"
+        >
+          {direction === "EN_TO_FI"
+            ? "English → Finnish"
+            : "Finnish → English"}
+        </button>
+      </div>
+
+      <div className="video-section">
+        <div className="video-wrapper">
+          <video 
+            ref={videoRef} 
+            autoPlay 
+            playsInline 
+            muted 
+            className={`video-feed ${cameraActive ? "visible" : "hidden"}`}
+          />
+          {!cameraActive && <div className="video-placeholder">Camera Off</div>}
+          
+          <div className="subtitle-overlay">
+            <div className="subtitle-original">{text}</div>
+            <div className="subtitle-translated">{translated}</div>
+          </div>
+        </div>
       </div>
     </div>
   );
